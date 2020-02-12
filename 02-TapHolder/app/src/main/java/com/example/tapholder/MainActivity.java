@@ -32,17 +32,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         counter = 0;
         // Label
         counterLabel = (TextView)findViewById(R.id.counterLabel);
-
         handleToolbar();
-
         handleTapButton();
-
-
-
     }
 
     public void handleToolbar() {
@@ -60,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 counterLabel.setText(String.valueOf(counter));
             }
         });
-
     }
 
     public void handleTapButton() {
@@ -87,7 +80,5 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
     }
-
 }
