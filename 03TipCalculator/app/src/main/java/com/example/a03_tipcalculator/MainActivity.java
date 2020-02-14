@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     double amount = 0;
     double tax = 0.15;
 
+    Button toolbar_overflow_menu_button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +36,22 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         setSupportActionBar(myToolbar);
 
 
-//        amountText = (EditText) findViewById(R.id.amountText);
-//        amountText.addTextChangedListener(this);
+        amountText = (EditText) findViewById(R.id.amountText);
+        //amountText.addTextChangedListener(this);
 
         // percentage
         topPercentageLabel = findViewById(R.id.topPercentageLabel);
 
+
+        // ToobarButton
+        toolbar_overflow_menu_button = (Button)findViewById(R.id.toolbar_overflow_menu_button);
+        toolbar_overflow_menu_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                amount = 0;
+                amountText.setText(String.valueOf(amount));
+            }
+        });
 
 
         // Seekbar
