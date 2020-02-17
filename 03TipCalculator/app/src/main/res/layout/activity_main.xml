@@ -63,12 +63,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Total"
+                android:text="Total $"
                 android:gravity="right"
                 android:textSize="25dp"/>
 
             <TextView
-                android:id="@+id/totalText"
+                android:id="@+id/totalLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"

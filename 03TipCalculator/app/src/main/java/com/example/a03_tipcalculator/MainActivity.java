@@ -16,15 +16,16 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity implements TextWatcher {
+public class MainActivity extends AppCompatActivity {
 
     private EditText amountText;
 
-    private TextView topPercentageLabel;
+    private TextView percentageLabel;
+    private TextView totalLabel;
 
     double amount = 0;
     double tax = 0.15;
-
+    double total = 0;
     Button toolbar_overflow_menu_button;
 
     @Override
@@ -32,27 +33,38 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
-
-
-        amountText = (EditText) findViewById(R.id.amountText);
-        //amountText.addTextChangedListener(this);
-
-        // percentage
-        topPercentageLabel = findViewById(R.id.topPercentageLabel);
-
-
-        // ToobarButton
+        // init
+        totalLabel = (TextView) findViewById(R.id.totalLabel);
+        percentageLabel = findViewById(R.id.topPercentageLabel);
         toolbar_overflow_menu_button = (Button)findViewById(R.id.toolbar_overflow_menu_button);
         toolbar_overflow_menu_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 amount = 0;
                 amountText.setText(String.valueOf(amount));
+                totalLabel.setText("");
             }
         });
 
+        // Toolbar
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
+
+        amountText = (EditText) findViewById(R.id.amountText);
+        amountText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                amount = Double.parseDouble(s.toString());
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+        });
 
         // Seekbar
         SeekBar simpleSeekBar=(SeekBar)findViewById(R.id.simpleSeekBar);
@@ -61,34 +73,15 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+                percentageLabel.setText(String.valueOf(progressChangedValue));
+                calculateTotal(progressChangedValue);
             }
-
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
-
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(MainActivity.this, "Seek bar progress is :" + progressChangedValue,
-                        Toast.LENGTH_SHORT).show();
-
-                topPercentageLabel.setText(String.valueOf(progressChangedValue));
-            }
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStopTrackingTouch(SeekBar seekBar) { }
         });
-
     }
 
-    @Override
-    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable editable) {
-
+    public void calculateTotal(double progressChangedValue) {
+        totalLabel.setText(String.valueOf(amount + (amount * (progressChangedValue/100))));
     }
 }
