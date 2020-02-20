@@ -5,17 +5,24 @@
 
 *Date: 2020-02-19*
 
+![MapLocation.gif](images/project4.gif)
+
 **What I learned from this demo:**
 
 * Work with LocationManager, get GPS providers and locations
 * Got to know how to request specified Permissions at RunTime
 * Add Markers on the map
 
+**Challenge**
+
+* Add zoom buttons
+
 
 ## 3. Tip Calculator
 
 *Date: 2020-02-14*
 
+![TipCalculator.gif](images/project3.gif)
 
 **What I learned from this demo:**
 
@@ -39,13 +46,22 @@
 * CountDownTimer
 * setOnTouchListener
 
+**Challenge**
+
+* Add a progress bar
 
 
 ## 1. Tap Counter
 
 *Date: 2020-02-03*
 
+![TapCounter.gif](images/project1.gif)
 
 **What I learned from this demo:**
 
-* setOnTouchListener
+* Use setOnTouchListener
+* Add a toolbar
+
+**Challenge**
+
+* Add a reset button inside toolbar

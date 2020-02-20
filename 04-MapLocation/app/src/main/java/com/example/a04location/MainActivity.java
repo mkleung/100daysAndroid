@@ -93,7 +93,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             String str = addressList.get(0).getLocality() + ", ";
             str += addressList.get(0).getCountryName();
             mMap.addMarker(new MarkerOptions().position(latLng).title(str));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10.2f));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
         } catch (IOException e) {
             e.printStackTrace();
         }
