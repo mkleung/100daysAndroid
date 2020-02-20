@@ -32,6 +32,7 @@
 
 *Date: 2020-02-10*
 
+![TapHolder.gif](images/project2.gif)
 
 **What I learned from this demo:**
 
