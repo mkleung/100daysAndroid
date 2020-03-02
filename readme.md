@@ -1,5 +1,18 @@
 # 100 Days of Android
 
+## 5. Image Picker
+*Date: 2020-03-02*
+
+
+**What I learned from this demo:**
+
+* Start a intent and get the result from that
+* Work with local images and camera basics
+* Display bitmap data on an ImageView
+
+**Challenge**
+
+
 
 ## 4. Display My Location in map
 
