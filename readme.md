@@ -3,7 +3,7 @@
 ## 5. Image Picker
 *Date: 2020-03-02*
 
-![MapLocation.gif](images/android5.gif)
+<img src="images/android5.gif" alt="Image Picker"  width="200" />
 
 **What I learned from this demo:**
 
@@ -19,7 +19,7 @@
 
 *Date: 2020-02-19*
 
-![MapLocation.gif](images/android4.gif)
+<img src="images/android4.gif" alt="Map Location"  width="200" />
 
 **What I learned from this demo:**
 
@@ -36,7 +36,7 @@
 
 *Date: 2020-02-14*
 
-![TipCalculator.gif](images/android3.gif)
+<img src="images/android3.gif" alt="Tip Calculator"  width="200" />
 
 **What I learned from this demo:**
 
@@ -53,7 +53,7 @@
 
 *Date: 2020-02-10*
 
-![TapHolder.gif](images/android2.gif)
+<img src="images/android2.gif" alt="Tap Holder"  width="200" />
 
 **What I learned from this demo:**
 
@@ -69,7 +69,7 @@
 
 *Date: 2020-02-03*
 
-![TapCounter.gif](images/android1.gif)
+<img src="images/android1.gif" alt="Tap Counter"  width="200" />
 
 **What I learned from this demo:**
 
