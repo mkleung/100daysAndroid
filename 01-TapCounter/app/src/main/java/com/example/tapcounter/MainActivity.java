@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         // Toolbar
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("Tap Counter");
 
         Button button = (Button) findViewById(R.id.toolbar_overflow_menu_button);
 

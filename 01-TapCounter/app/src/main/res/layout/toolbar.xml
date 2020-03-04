@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFA000"
+    android:background="#1abc9c"
     android:elevation="4dp"
     >
 
@@ -16,10 +16,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TapHolder"
+            android:text="TapCounter"
             android:textSize="10pt"
             android:gravity="left"
             android:layout_weight="5"
+            android:textColor="#FFF"
             />
 
         <Button
